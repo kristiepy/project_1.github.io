@@ -1,0 +1,307 @@
+/* CSS Document */
+/* fonts start*/
+.unna-regular {
+  font-family: "Unna", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unna-bold {
+  font-family: "Unna", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.unna-regular-italic {
+  font-family: "Unna", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.unna-bold-italic {
+  font-family: "Unna", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.yantramanav-thin {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.yantramanav-light {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.yantramanav-regular {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yantramanav-medium {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.yantramanav-bold {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.yantramanav-black {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+/* fonts end*/
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+header h1, header h1 a{
+	font-size:35px;
+	font-family: "Yantramanav", sans-serif;
+	font-weight: 400;
+	background-color: black;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 30px 30px 10px 30px;
+	letter-spacing: 1.7px;
+	text-decoration: none;
+}
+.navbar {
+	display: flex;
+	background-color: black;
+	justify-content: center;
+    align-items: center;
+	position: sticky;
+	top: 0; /* This ensures it sticks to the top of the viewport */
+	z-index: 10; /* Higher z-index to ensure it stays above other content */
+
+}
+.navbar ul li a, .navbar ul{
+	font-family: "Yantramanav", sans-serif;
+	font-weight: 100;
+	font-size: 1em;
+	color: white;
+	padding: 10px;
+	margin: 5px 15px;
+	list-style: none;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	position: relative; /* Needed for positioning the pseudo-element */
+    display: flex;
+}
+
+.navbar ul li a::after {
+    content: ''; 
+    position: absolute;
+    left: 50%; 
+    bottom: 0;
+    width: 0; /* Start with 0 width */
+    height: 2px; /* Thickness of the bottom border */
+    background-color: white; /* Border color */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth transition */
+}
+.navbar ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Shift from center to left */
+}
+.banner{
+	background-image: url("../image/background_band.JPG");
+	background-size: cover;
+	height: 550px;
+	width: 100%;
+	background-position: center;
+	opacity: 100%;
+}
+.grid-container{
+	background-color: black;
+	display: grid;
+	grid-template-columns: 5% 45% 50%;
+	grid-template-rows: auto auto;
+	place-items: center;
+}
+.quote{
+	grid-column: 2;
+}
+.quote p{
+	font-family: "Yantramanav", sans-serif;
+	color: #FFFFFF;
+	font-size: 2.5em;
+	padding: 40px 60px 10px 10px;
+	place-items: center;
+	font-style: italic;
+}
+#first-image{
+	grid-column: 3;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+	place-items: center;
+}
+.mission{
+	display: grid;
+	background-color:#341948;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row: 2;
+	height: 100%;
+	margin: 20px 0px;
+}
+.mission p, .mission h2{
+	font-family: "Yantramanav", sans-serif;
+	color: #9388A2;
+	text-align: center;
+}
+.mission h2{
+	font-size: 2.5em;
+	font-weight: 700;
+	font-style: bold;
+	padding-top: 50px;
+	letter-spacing: 2px;
+}
+.mission p{
+	font-size:1.4em;
+	font-weight: 300;
+	padding: 20px 250px 50px;
+	letter-spacing: 1px;
+	line-height: 1.5em;
+}
+.footer {
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 60px 40px;
+    text-align: center;
+	font-family: "Yantramanav", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between the columns */
+    flex-wrap: wrap; /* Allows columns to wrap on small screens */
+    max-width: 1200px; /* Optional: Limit the width of the footer */
+    margin: 0 auto; /* Center the footer content */
+    gap: 30px; /* Spacing between the columns */
+}
+
+.footer-column {
+    flex-basis: 30%; /* Each column takes up 30% of the available width */
+    min-width: 200px; /* Ensure columns don’t shrink too much */
+    text-align: left;
+}
+
+.footer h3 {
+    margin-bottom: 80px;
+    color: #9388A2; /* White heading */
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 20px 0;
+	font-weight: 300;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #9388A2; /* Change link color on hover */
+}
+
+/* Contact Form Styles */
+.footer-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+	font-size: 1.1em;
+}
+
+.footer-contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	position: relative; /* Position relative to allow pseudo-element to work */
+    width: 100%;
+    padding-bottom: 5px; /* Add some space below the group */
+}
+.footer-contact-form .form-group::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the form group */
+    left: 0;
+    width: 100%; /* Span across the entire form group (label + input) */
+    height: 2px; /* Height of the border line */
+    background-color: white; /* Border color */
+}
+
+.footer-contact-form label {
+    color: white;
+    font-size: 0.9em;
+    flex-basis: 30%; /* Adjust the label width */
+    text-align: left;
+    position: relative; /* Relative positioning for alignment */
+	align-items: baseline;
+	font-weight: 300;
+}
+
+.footer-contact-form input, 
+.footer-contact-form textarea {
+    flex-basis: 65%; /* Adjust the input/textarea width */
+    padding: 10px 0; /* Remove padding on the sides, only keep top and bottom */
+    background-color: transparent; /* No background color */
+    color: white;
+    font-size: 1em;
+    border: none; /* Remove borders from input fields */
+    outline: none;
+}
+.footer-contact-form input:focus, 
+.footer-contact-form textarea:focus {
+    outline: none; /* Remove any default focus outline */
+}
+
+.footer-contact-form textarea {
+    height: 70px;
+}
+
+.footer-contact-form button {
+    background-color: #30177B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+	font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.footer-contact-form button:hover {
+    background-color: #4C24C8;
+}
+
+
+
+
+
+
+
+
